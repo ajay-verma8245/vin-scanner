@@ -1,0 +1,33 @@
+# build output
+/build
+/report.html
+
+# git folder...
+/.git
+
+# NPM package folder
+/node_modules
+
+
+# editors
+/.idea
+/.vscode
+
+# test reports & coverage reports
+/coverage
+/junit
+
+# env settings
+/.env*.local
+
+# CI bins
+/bin
+
+# Dist
+/dist
+
+# DLLs
+/build/dlls/prebuild
+
+package.json
+*.d.ts

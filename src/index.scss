@@ -1,0 +1,24 @@
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #fff;
+	letter-spacing: px-to-rem(1px);
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.error {
+	color: #f00;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.vin-root {
+	padding: 20px;
+	font-family: "Courier New", Courier, monospace;
+}

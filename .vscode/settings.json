@@ -1,0 +1,9 @@
+{
+	"editor.codeActionsOnSave": {
+		"source.fixAll.tslint": "explicit"
+	},
+	"editor.fontFamily": "\"Cascadia Code\", Consolas, 'Courier New', monospace",
+	"editor.fontLigatures": true,
+	"explorer.compactFolders": false,
+	"editor.tabSize": 3,
+}

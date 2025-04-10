@@ -1,7 +1,7 @@
 // @ts-ignore
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Quagga from "quagga";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 const inputStreams = [
 	"code_128_reader ",
@@ -37,18 +37,22 @@ const VinScanner = () => {
 	const [scanResult, setScanResult] = useState(null);
 	const [error, setError] = useState<string | null>(null);
 	const [src, setSrc] = useState("");
+	// Create a reference to the file input element.
+	const fileInputRef = useRef<HTMLInputElement>(null);
+
+	useEffect(() => {
+		// Attempt to automatically open the camera
+		// Note: Many browsers require a user gesture, so this may not work on all devices.
+		if (fileInputRef.current) {
+			fileInputRef.current.click();
+		}
+	}, []);
 
 	const decodeBarcode = useCallback((originalSize: number, dataUrl: string) => {
-		console.log("size received... ", originalSize);
-
 		let isDecoded = false;
 		const size = getSize(originalSize);
 
-		console.log("size updated... ", size);
-
 		inputStreams.forEach((stream: string) => {
-			console.log("trying with... ", stream);
-
 			if (!isDecoded) {
 				Quagga.decodeSingle(
 					{
@@ -74,8 +78,6 @@ const VinScanner = () => {
 				);
 			}
 		});
-
-		console.log("is decoded", isDecoded);
 	}, []);
 
 	// Handle file input change event
@@ -126,7 +128,7 @@ const VinScanner = () => {
 		<div className="vin-root">
 			<h1>QuaggaJS Barcode Scanner</h1>
 
-			<input accept="image/*" className="mb-20" onChange={handleFileChange} type="file" />
+			<input accept="image/*" capture="environment" className="mb-20" onChange={handleFileChange} type="file" />
 
 			{scanResult && (
 				<div>

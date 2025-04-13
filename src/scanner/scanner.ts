@@ -48,13 +48,13 @@ const defaultDecoders = [
 type IScannerProps = {
 	onDetected: any;
 	scannerRef: any;
-	onScannerReady: any;
+	onScannerReady?: any;
 	cameraId: string | null;
 	facingMode: string;
-	constraints: any;
-	locator: any;
-	decoders: any;
-	locate: any;
+	constraints?: any;
+	locator?: any;
+	decoders?: any;
+	locate?: any;
 };
 
 const Scanner = ({

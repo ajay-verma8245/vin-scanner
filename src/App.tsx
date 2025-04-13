@@ -1,10 +1,10 @@
 import React from "react";
-import VinScanner from "vin";
+import BarcodeScanner from "scanner";
 
 const App: React.FC = () => {
 	return (
 		<div>
-			<VinScanner />
+			<BarcodeScanner />
 		</div>
 	);
 };

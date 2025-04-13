@@ -22,3 +22,17 @@ code {
 	padding: 20px;
 	font-family: "Courier New", Courier, monospace;
 }
+
+.scanner {
+	position: absolute;
+	top: 0;
+	// left: '0px',
+	// height: '100%',
+	// width: '100%',
+	border: 3px solid green;
+}
+
+.canvas-scanner {
+	position: relative;
+	border: 3px solid red;
+}

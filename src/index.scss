@@ -12,6 +12,7 @@ code {
 
 .error {
 	color: #f00;
+	font-size: 10px;
 }
 
 .mb-20 {
@@ -35,4 +36,24 @@ code {
 .canvas-scanner {
 	position: relative;
 	border: 3px solid red;
+}
+
+.zxing-container {
+	padding: 20px;
+	font-family: Arial, sans-serif;
+}
+
+.mb-40 {
+	margin-bottom: 40px;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}
+
+.video {
+	width: 100%;
+	max-width: 400px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
 }

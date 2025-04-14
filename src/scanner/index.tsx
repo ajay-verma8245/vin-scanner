@@ -23,7 +23,6 @@ const BarcodeScanner = () => {
 			};
 			const enumerateCameras = async () => {
 				const cameras = await Quagga.CameraAccess.enumerateVideoDevices();
-				console.log("Cameras Detected: ", cameras);
 
 				return cameras;
 			};
